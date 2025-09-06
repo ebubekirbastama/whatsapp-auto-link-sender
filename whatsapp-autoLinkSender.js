@@ -49,6 +49,7 @@ async function sendLinksSequentially() {
     if (sendButton) {
       sendButton.click();
       console.log(`Gönderildi: ${links[i]}`);
+       await new Promise(resolve => setTimeout(resolve, 1000));
     } else {
       console.error("Gönder butonu bulunamadı!");
     }
